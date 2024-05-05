@@ -33,7 +33,7 @@ const readAndWriteData = (data?: Buffer) => {
     .map((weight, index) => Array(weight).fill(index))
     .flat();
 
-  let rnd = Math.floor(Math.random() * allWeights.length);
+  const rnd = Math.floor(Math.random() * allWeights.length);
 
   const indexToUse = allWeights[rnd];
   const result = Object.keys(weightedMap)[indexToUse];
