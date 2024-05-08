@@ -4,24 +4,9 @@ enum OVERWATCH_ROLES {
   SUP = "support",
 }
 
-const TANK_HEROES = [
-  "reinhardt",
-  "roadhog",
-  "winston",
-  "sigma",
-  "zarya",
-  "junker_queen",
-];
+const TANK_HEROES = ["reinhardt", "roadhog", "winston", "sigma", "zarya", "junker_queen"];
 const DAMAGE_HEROES = ["cassidy", "junkrat"];
-const SUPPORT_HEROES = [
-  "ana",
-  "baptiste",
-  "kiriko",
-  "zenyatta",
-  "moira",
-  "illari",
-  "brigitte",
-];
+const SUPPORT_HEROES = ["ana", "baptiste", "kiriko", "zenyatta", "moira", "illari", "brigitte"];
 
 const ROLE_TO_HEROES_MAP: { [role in OVERWATCH_ROLES]: string[] } = {
   [OVERWATCH_ROLES.TANK]: TANK_HEROES,

@@ -27,12 +27,12 @@ const updateWeights = (allKeys: string[], selectedKey: string, map: KEY_TO_WEIGH
 
 const readAndWriteData = async (data?: Buffer) => {
   const desiredKeys = Object.values(OVERWATCH_ROLES);
-  let weightedMap: KEY_TO_WEIGHT_MAP = data ? JSON.parse(data.toString()) : intializeKeysWithWeights(desiredKeys);
+  const weightedMap: KEY_TO_WEIGHT_MAP = data ? JSON.parse(data.toString()) : intializeKeysWithWeights(desiredKeys);
   console.log("Current weights: ", weightedMap);
 
   const allWeights = Object.values(weightedMap).reduce(
     (accumulatedWeight, weight, index) => accumulatedWeight.concat(Array<number>(weight).fill(index)),
-    [] as number[],
+    [] as number[]
   );
 
   const rnd = Math.floor(Math.random() * allWeights.length);
@@ -68,4 +68,4 @@ const init = () => {
   generateChoice();
 };
 
-init();
+//init();
