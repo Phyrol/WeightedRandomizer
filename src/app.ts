@@ -52,7 +52,6 @@ const generateChoice = async () => {
   try {
     const file = await fs.readFile(WEIGHTED_FILE_NAME);
     console.log("Found existing data");
-
     readAndWriteData(file);
   } catch (err) {
     if (err.code === FILE_NOT_FOUND_ERR_CODE) {
@@ -68,4 +67,4 @@ const init = () => {
   generateChoice();
 };
 
-//init();
+init();
